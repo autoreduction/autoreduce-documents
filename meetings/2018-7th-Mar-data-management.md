@@ -1,6 +1,7 @@
 Agenda
 ------
 * Discuss data management with Tom and data going in and out of autoreduce
+
 Minutes/outcomes
 -------
 Attendees: Anders, Jamie, Elliot and Tom
