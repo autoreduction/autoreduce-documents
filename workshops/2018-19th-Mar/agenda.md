@@ -13,7 +13,7 @@ Elliot kick-off graduate rotation
 * Anders: explain issues with current compute infrastructure and all discuss how to improve this shorter term
   * Move where scripts are stored to where calibration are stored - thereby remove dependency?
   * Create cron job for uploading script global history to new autoreduce-cron repo and create a github user for this purpose
-  * Currently wipe MySQL manually before each cycle - automate this and how best? 
+  * Currently wipe MySQL manually before each cycle - automate this and how best? Probably could extend this to longer period with current setup without seeing a significant reduction in how the WebApp perform and responds to user interactions
 * Anders: Remaining smaller concerns with 3rd party software service dependences and all discuss these
   * For end of run monitor script
   * For webapp authentication and authorisation
