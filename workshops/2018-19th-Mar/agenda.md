@@ -21,6 +21,8 @@ Elliot kick-off graduate rotation
   * Inestigation into using STFC cloud for compute infrastructure. Anders: status on STFC cloud
   * Making the webapp viewable outside the lab
     * Discuss work estimate for this and evaluate risk/pros/cons/concerns of this
+  * Making the WebApp control how users can edit reduction scrips
+    * flesh out predicted work units and predicted estimates for this
   * Storing data going into and going out of autoreduce into catalogue
     * flesh out predicted work units and predicted estimates for this
 
