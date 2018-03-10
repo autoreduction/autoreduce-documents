@@ -28,6 +28,6 @@ Elliot kick-off graduate rotation
     * flesh out predicted work units and predicted estimates for this
 
 13:00-16:00
-* Create issues
+* Create remaining issues
 * Create workplan and get started
 
