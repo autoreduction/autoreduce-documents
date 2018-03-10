@@ -11,8 +11,8 @@ Elliot kick-off graduate rotation
   * Move before cycle check-list to this repo?
   * How to best distribute info for wiki for autoreduce repository and within the repository, this autoreduce-documents repository and sharepoint?
 * Anders: explain issues with current compute infrastructure and all discuss how to improve this shorter term
-  * Move where scripts are stored to where calibration are stored - thereby remove dependency
-  * ...
+  * Move where scripts are stored to where calibration are stored - thereby remove dependency?
+  * Create cron job for uploading script global history to new autoreduce-cron repo and create a github user for this purpose 
 * Anders: Remaining smaller concerns with 3rd party software service dependences and all discuss these
   * For end of run monitor script
   * For webapp authentication and authorisation
