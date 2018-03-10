@@ -23,7 +23,8 @@ Elliot kick-off graduate rotation
     * Discuss work estimate for this and evaluate risk/pros/cons/concerns of this
   * Making the WebApp control how users can edit reduction scrips
     * flesh out predicted work units and predicted estimates for this
-  * Storing data going into and going out of autoreduce into catalogue as discussed [data management](/meetings/2018-7th-Mar-data-management.md)
+  * Storing data going into and going out of autoreduce into catalogue 
+  (as discussed [data management](/meetings/2018-7th-Mar-data-management.md))
     * flesh out predicted work units and predicted estimates for this
 
 13:00-16:00
