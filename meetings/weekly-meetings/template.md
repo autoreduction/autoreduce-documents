@@ -21,7 +21,7 @@ This week’s work updates
 * *Work carried out by Jamie*
 
 **George**
-* *Work carried out by Jamie*
+* *Work carried out by George*
 
 Working on next week
 ====================
