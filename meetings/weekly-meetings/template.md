@@ -20,6 +20,8 @@ This week’s work updates
 **Jamie**
 * *Work carried out by Jamie*
 
+**George**
+* *Work carried out by Jamie*
 
 Working on next week
 ====================
@@ -34,4 +36,7 @@ Working on next week
 * *Work for next week*
 
 **Jamie**
+* *Work for next week*
+
+**George**
 * *Work for next week*
