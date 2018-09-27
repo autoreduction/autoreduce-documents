@@ -11,14 +11,8 @@ This week’s work updates
 **Anders**
 * *Work carried out by Anders* 
 
-**David:**
-* *Work carried out by David*
-
 **Elliot**
 * *Work carried out by Elliot*
-
-**Jamie**
-* *Work carried out by Jamie*
 
 **George**
 * *Work carried out by George*
@@ -29,13 +23,7 @@ Working on next week
 **Anders**
 * *Work for next week*
 
-**David:**
-* *Work for next week*
-
 **Elliot**
-* *Work for next week*
-
-**Jamie**
 * *Work for next week*
 
 **George**
