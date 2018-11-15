@@ -19,7 +19,7 @@ Requirements
 2. After detecting a problem, the `HC` must be able to restart the `EoRM` to allow it to resume activity
 3. After detecting a problem, the `HC` must be able to submit the runs that were missed while `EoRM` was not in a working state
 4. The `HC` must not directly interact with `EoRM` with the exception of restarting the service.
-  * This is because we do not want take any processing cycle away from `EoRM` to ensure the `HC` is not causing `EoRM` to miss runs.
+   *This is because we do not want take any processing cycle away from `EoRM` to ensure the `HC` is not causing `EoRM` to miss runs.*
 
 Proposed requirement solutions
 ==============================
