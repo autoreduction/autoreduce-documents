@@ -25,16 +25,6 @@ This project would involve the following tasks:
 *	Ensuring that the automated testing interfaces with git to get most up to date version of code base
 * Making the tests run on the machine externally accessible
 
-## End of Run monitor rewrite
-The end of run monitor is one of the core parts of the autoreduction system used to discover when new runs are created (and therefore should be processed). The current end of run monitor is considered to be fragile and over complex leading to an unstable solution. A new design has been produced to implement a much more straight forward system that sacrifices real-time run discovery for close to real time run discovery but much higher stability. 
-This project would involve the following tasks:
-* Learning the old and new designs for the end of run monitor
-* Creating an improved testing framework to create a “fake” ISIS data archive
-* Implementation of the new end of run monitor design
-* Fully testing of the new monitor
-* Rigorous manual testing
-* Deployment onto development environment
-
 ## Autoreduction to be cloud compatible
 The autoreduction system currently run on non-cloud enabled hardware, which by end of 2019-ish will not be able to provide enough compute resources to satisfy demand. As such, we want to expand the system to be able to run on an expandable system to deal with increased system load. We have started to make progress towards, including creating ansible scripts for automated creation of VMs on STFC/SCD cloud.
 This project would involve the following tasks:
