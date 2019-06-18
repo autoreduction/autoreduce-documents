@@ -16,7 +16,7 @@ Potential extension bonus tasks:
 * Talk to the IBEX team about adding this to their interface
 
 ## Web application testing
-The web application is the main way in which users interact with autoreduction. As such we should look to ensure that this is well tested. With a combination of unit and system tests incorporating the test automation tool selenium, we hope to add testing to the web application. For the more complex use cases, we would want to have a separate machine to run these test once per day as to not interfere with the travis pipeline for testing. 
+The web application is a way in which users can monitor and interact with Autoreduction and it is used by support to monitor the system. A sub-project is to add automated testing to this part of the system also, with a combination of unit and system tests incorporating the test automation tool Selenium. For the more complex use cases, we would want to have a separate machine to run these test less frequently, once per day, as to not interfere with the travis testing pipeline. 
 This project would involve the following tasks:
 * Familiarising yourself with Selenium
 * Creating test cases to perform common workflows on the web application
@@ -36,11 +36,11 @@ This project would involve the following tasks:
 * Deployment onto development environment
 
 ## Autoreduction to be cloud compatible
-The autoreduction system currently runs on a single compute node, which is not a realistic long term solution. As such, we want to expand the system to be able to run on an expandable system to deal with increased system load. We have started to make progress towards this by creating an ansible script for automated creation of VMs that are setup to run autoreduction.
+The autoreduction system currently run on non-cloud enabled hardware, which by end of 2019-ish will not be able to provide enough compute resources to satisfy demand. As such, we want to expand the system to be able to run on an expandable system to deal with increased system load. We have started to make progress towards, including creating ansible scripts for automated creation of VMs on STFC/SCD cloud.
 This project would involve the following tasks:
-* Familiarisation with the ansible scripts
-* Adding the ability to incorporate reduction software (such as MANTID) into ansible scripts
+* Familiarisation yourself with the existing work done towards achieve this goal
 * Exploring options for managing VMs with regards to expanding and contracting services based on load requirements
+* As needed update software architecture documentation and views and agree on solution with relevant stakeholder  
 * Implementing a system for doing this
 * Testing and deployment of new system
 
