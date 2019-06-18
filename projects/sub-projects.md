@@ -1,13 +1,17 @@
-# Autoreduction projects
+This page lists upcoming Autoreduction sub-projects, which are estimated to take anything between a month and a year to complete depending on skill level and the specific sub-project.
+
+There are opportunities to get involved with any of these. Note, this list may from time to time get out of date and please don't hesitate to contact us to discuss getting involved with any of these sub-projects.
+
+# Autoreduction sub-projects
 ## Web application graphical output
-The web application is currently only being used in the as a high level overview for the status of reduction jobs. A request from instrument scientists has been to instead show a graphical representation of their reduced data.
+The web application is currently being used to view, in a textual manner, the status of reduction jobs. A request from instrument scientists has been to also show a graphical representation of their reduced data.
 This project would involve the following tasks:
 * Agreeing the format which instrument scientists would like to see their data
 * Producing a plot from the output reduced file
 * Storing the plot in the database
 * Adding that plot to the web application
 
-Extension task:
+Potential extension bonus tasks:
 * Be able to create a graph based on snapshots of the data taken during acquisition
 * Talk to the IBEX team about adding this to their interface
 
