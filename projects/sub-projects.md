@@ -44,11 +44,11 @@ This project would involve the following tasks:
 * Implementing a system for doing this
 * Testing and deployment of new system
 
-## Queue Processors rewrite
-The Queue Processor handles the flow control of the autoreduction system. It consumes and sends messages to the ActiveMQ messaging service to update the status of reduction jobs appropriately. The original code for this is poorly structured and in desperate need of improvement.
+## Queue Processor rewrite
+The Queue Processor handles the flow control of the Autoreduction system. It consumes and sends messages to the ActiveMQ messaging service to update the status of reduction jobs appropriately. Due to the system evolving, it has been identified that this part of code code is in need of re-structuing and improvements.
 This project would involve the following tasks:
 * Familiarising yourself with the current Queue Processor system
-* Designing a new (cleaner) implementation for the queue processor
+* Designing a new and cleaner implementation for the queue processor
 * Implementing your design for the queue processor
 * Fully testing the system with a combination of unit and system tests.
 
