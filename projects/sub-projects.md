@@ -11,7 +11,7 @@ This project would involve the following tasks:
 * Storing the plot in the database
 * Adding that plot to the web application
 
-Potential extension bonus tasks:
+Potential extension tasks:
 * Be able to create a graph based on snapshots of the data taken during acquisition
 * Talk to the IBEX team about adding this to their interface
 
@@ -34,11 +34,20 @@ This project would involve the following tasks:
 * Implementing a system for doing this
 * Testing and deployment of new system
 
-## Queue Processor rewrite
-The Queue Processor handles the flow control of the Autoreduction system. It consumes and sends messages to the ActiveMQ messaging service to update the status of reduction jobs appropriately. Due to the system evolving, it has been identified that this part of code code is in need of re-structuing and improvements.
-This project would involve the following tasks:
-* Familiarising yourself with the current Queue Processor system
-* Designing a new and cleaner implementation for the queue processor
-* Implementing your design for the queue processor
-* Fully testing the system with a combination of unit and system tests.
+## Database optimisations (Pending)
+* We may be moving to a new database maintained by SCD so this might not be in our scope. Will complete if required (14/10/2019)
 
+## Reduction Configuration
+For reproducabiity, it's important that we can trak the exact variables and environment used to produce a reduced file. At present we can only track the variables. It'll be important to also include the docker container used and a way to use it again. For the use of other projects, applications of autoreduction it is important to make this more generic. 
+* Define a configuration file that states all the input / output parameters of a processing job
+* Allow the QueueProcessors to operate with these configuration files.
+* Ensure that ISIS data can construct these configuration files 
+* Ensure all the relevant meta data is captured to allow for reproducability of processing
+
+## Monitoring the Workflow
+It would be great to have the ability to see the full state of the data pipeline from start to finish for ISIS data. 
+Specifically this would include:
+* Data acquisition (file in file system)
+* Ingestion into ICAT (ICAT API call) 
+* Autoreduction ingestion and status (Autoreduction DB call) 
+* Autoreduction completion and available in CEPH (AR DB and inspect ceph)
