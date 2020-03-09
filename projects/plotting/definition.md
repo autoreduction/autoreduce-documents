@@ -1,11 +1,16 @@
-Final implementation:
-
-It must be possible to view a variety of interactive plots of either one or more pecices of reduced data in the web application.
-It must be possible to change the plot type on the fly, to view different aspects of the data depending on instrument requirements.
-The plots must render on the page within an acceptable amount of time (ideally, no more than 5 seconds maximum. Most should load within 1 second)
+#### Description
+The web app should be capable of displaying reduced data after it has been acquired. This will allow users
+to visualise their results and perform basic inspection of their data to ensure it is fit for purpose.
 
 
-Break down of feature:
+####Requirements / use cases
+
+* It must be possible to view a variety of interactive plots of either one or more pecices of reduced data in the web application.
+* It must be possible to change the plot type on the fly, to view different aspects of the data depending on instrument requirements.
+* The plots must render on the page within an acceptable amount of time (ideally, no more than 5 seconds maximum. Most should load within 1 second)
+
+
+####Requirements / use cases
 1. Display a single interactive plot for the most recent run on the main page
 2. Treat reduced data so that it can be accessed and plotted in a timely manor.
 3. Display a single interactive plot for all runs on their run summary pages
@@ -13,7 +18,11 @@ Break down of feature:
 5. Possible to display different information about the data set (e.g. detector image)
 6. Possible to display a dataset that is a combination of several runs
 
-Considerations:
+
+#### Outputs
+* The web app should render plots for users
+
+####Considerations
 * At what stage should data be treated (2):
   * On the fly: Longer time to render graphs (but may be acceptable)
   * At reduction time: Would mean storing additional files on CEPH
