@@ -43,11 +43,3 @@ For reproducabiity, it's important that we can trak the exact variables and envi
 * Allow the QueueProcessors to operate with these configuration files.
 * Ensure that ISIS data can construct these configuration files 
 * Ensure all the relevant meta data is captured to allow for reproducability of processing
-
-## Monitoring the Workflow
-It would be great to have the ability to see the full state of the data pipeline from start to finish for ISIS data. 
-Specifically this would include:
-* Data acquisition (file in file system)
-* Ingestion into ICAT (ICAT API call) 
-* Autoreduction ingestion and status (Autoreduction DB call) 
-* Autoreduction completion and available in CEPH (AR DB and inspect ceph)
