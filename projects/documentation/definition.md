@@ -1,11 +1,11 @@
-####Description
+#### Description
 In order to lessen the burden on instrument scientists and the development team when on boarding users,
 it is important to have good quality documentation to guide users through the system. Ideally, users
 should be able to use the autoreduction system with very minimal help from others and instead rely on the 
 documentation. Documentation should be concise and fit the target audience e.g. developer / user / admin
 documentation should be separated.
 
-####Requirements / use cases
+#### Requirements / use cases
 * It must be possible to understand the functionality of the Autoreduction system as a user from the provided documentation
 * The documentation should be split up to allow users / instrument scientist / developers access to the information they need easily
 * The documentation should be integrated into the web application
