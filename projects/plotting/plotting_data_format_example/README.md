@@ -39,11 +39,11 @@ pandas dataframe following the below format:
 ```
 |Spectrum | X      | Y   | E  |
 | :---    | :---: |:---:| ---:|
-| 1.0     |       |     |     |
-| 1.0     | 1     | 2   | 3   |
-| 1.0     | 4     | 5   | 6   |
-| 2.0     | 1     | 2   | 3   |
-| 2.0     | 4     | 5   | 6   |
+| 1       |       |     |     |
+| 1       | 1.0   | 2.0 | 3.0 |
+| 1       | 4.0   | 5.0 | 6.0 |
+| 2       | 1.0   | 2.0 | 3.0 |
+| 2       | 4.0   | 5.0 | 6.0 |
 ```
 
 The minimum columns required are Spectrum, X and Y. additional columns can be added if required. 
