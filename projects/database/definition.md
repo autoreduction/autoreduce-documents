@@ -1,5 +1,6 @@
 ## ToDo
 
+0. Define use cases for the database
 1. Define requirements of database solution:
    1. What data it needs to hold (types / relationships)
    1. How it needs to be accesses
