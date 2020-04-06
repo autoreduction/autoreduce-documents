@@ -1,6 +1,6 @@
 ## Research Summary
 * No *official* standalone Django ORM
-* **BUT** Django built to be very loosely coupled - few assumptions about it's use
+* **BUT** Django built to be very loosely coupled - few assumptions about it's used
 * There are multiple Git Repo examples of using Django-ORM as a standlone
 * All threads I've found of people asking about standalone Django-ORM have responded with examples (None have said you cannot or even not recommended it - implying there shouldn't be an issue doing so)
 * Lots of code snippets on Stackoverflow on how to use ORM without any Web component
