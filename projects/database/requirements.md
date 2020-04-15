@@ -6,3 +6,5 @@ The reasons for rewritting the database are as follow:
   * The value of these should be able to be set or automatically discovered
 * Autoreduction should store information about the software + version used to reduce data
 * Autoreduction should be able to track all the files it outputs (not just a path to the directory) and the type of file they are
+
+The current Schema does not allow for any of the above without significant rewrite or highly complex code to manipulate the records.
