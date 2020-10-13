@@ -3,17 +3,13 @@ This page lists upcoming Autoreduction sub-projects, which are estimated to take
 There are opportunities to get involved with any of these. Note, this list may from time to time get out of date and please don't hesitate to contact us to discuss getting involved with any of these sub-projects.
 
 # Autoreduction sub-projects
-## Web application graphical output
-The web application is currently being used to view, in a textual manner, the status of reduction jobs. A request from instrument scientists has been to also show a graphical representation of their reduced data.
+## Web application dynamical graphical output
+The web application has been extending to allow static ploting. This project is to extend it allow dynamical plotting. A request from instrument scientists.
 This project would involve the following tasks:
-* Agreeing the format which instrument scientists would like to see their data
-* Producing a plot from the output reduced file
+* Agreeing the presentation which instrument scientists
+* Producing a dynamical plot from the output reduced file
 * Storing the plot in the database
 * Adding that plot to the web application
-
-Potential extension tasks:
-* Be able to create a graph based on snapshots of the data taken during acquisition
-* Talk to the IBEX team about adding this to their interface
 
 ## Web application testing
 The web application is a way in which users can monitor and interact with Autoreduction and it is used by support to monitor the system. A sub-project is to add automated testing to this part of the system also, with a combination of unit and system tests incorporating the test automation tool Selenium. For the more complex use cases, we would want to have a separate machine to run these test less frequently, once per day, as to not interfere with the travis testing pipeline. 
@@ -34,12 +30,12 @@ This project would involve the following tasks:
 * Implementing a system for doing this
 * Testing and deployment of new system
 
-## Database optimisations (Pending)
-* We may be moving to a new database maintained by SCD so this might not be in our scope. Will complete if required (14/10/2019)
+## Database optimisations and handling new use cases
+* As project has grown identified need for 1) better optimisation 2) handle more meta-data and cater for more intelligent scripts e.g. can refer to previously reduced jobs.
 
-## Reduction Configuration
-For reproducabiity, it's important that we can trak the exact variables and environment used to produce a reduced file. At present we can only track the variables. It'll be important to also include the docker container used and a way to use it again. For the use of other projects, applications of autoreduction it is important to make this more generic. 
-* Define a configuration file that states all the input / output parameters of a processing job
-* Allow the QueueProcessors to operate with these configuration files.
-* Ensure that ISIS data can construct these configuration files 
+## Reduction reproducibility
+For full reduction reproducabiity, it's important that we trak the exact variables and environment used to produce a reduced file. At present we can only track the variables. It'll be important to also include the docker container used etc and a way to use it again. For the use of other projects, applications of autoreduction it is important to make this more generic. 
+* Define configuration that states all the input / output parameters of a processing job
+* Allow the QueueProcessors to operate with these configurations
+* Ensure that ISIS data can construct these configurations 
 * Ensure all the relevant meta data is captured to allow for reproducability of processing
