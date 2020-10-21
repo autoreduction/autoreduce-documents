@@ -22,13 +22,14 @@ This project would involve the following tasks:
 * Making the tests run on the machine externally accessible
 
 ## Autoreduction to be cloud compatible
-The autoreduction system currently run on non-cloud enabled hardware, which by end of 2019-ish will not be able to provide enough compute resources to satisfy demand. As such, we want to expand the system to be able to run on an expandable system to deal with increased system load. We have started to make progress towards, including creating ansible scripts for automated creation of VMs on STFC/SCD cloud.
+The autoreduction system currently run on non-cloud enabled hardware, which is not easy to extend and by its nature is not elastic. As such, we want to expand the system to be able to run on an expandable system and to deal with increased system load. We have started to make progress towards, including creating ansible scripts for automated creation of VMs on STFC/SCD cloud.
 This project would involve the following tasks:
-* Familiarisation yourself with the existing work done towards achieve this goal
-* Exploring options for managing VMs with regards to expanding and contracting services based on load requirements
-* As needed update software architecture documentation and views and agree on solution with relevant stakeholder  
-* Implementing a system for doing this
-* Testing and deployment of new system
+* Exploring options with regards to expanding and contracting services based on load requirements, and in particular also handle the requirements:
+  * any data reduction must start within seconds of completing on ISIS beamline experiment and at most within a minute
+  * handling in the region of 10000 jobs over a cycle (growing with more beamlines using the service) and where each job on a 48 core, 128GB RAM machine takes anything from 10 seconds to 10 minutes to complete
+* Make software and deployment changes to enabled favoured solution, together with detailed documentation on this and how to monitor, maintain and bug fix during cycles
+* Setting up of suitable development environment for this, and complete a period of testing this environment and with Autoreduction team and well as with selected customers
+* Extensive period of next testing on production and before an ISIS cycle starts, with a wider range of customers
 
 ## Database optimisations and handling new use cases
 * As project has grown identified need for 1) better optimisation 2) handle more meta-data and cater for more intelligent scripts e.g. can refer to previously reduced jobs.
