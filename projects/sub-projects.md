@@ -3,6 +3,12 @@ This page lists upcoming Autoreduction sub-projects, which are estimated to take
 There are opportunities to get involved with any of these. Note, this list may from time to time get out of date and please don't hesitate to contact us to discuss getting involved with any of these sub-projects.
 
 # Autoreduction sub-projects
+## Enrich the script API to automatically upload and delete reduce data
+Currently all data created during a reduction run gets stored to CEPH. Enhance the API so that authors can tag some output files to be automatically uploaded to the ISIS Data Catalogoue. Also, and this need consultation with users, some form of script method or otherwise which *both* serve the both of allowing script authors to specify files that can be deleted after reduction job completed *and* encourage the script author to think about this - i.e. to *stimulate* that they are mean with data storage. The work to enabled automatic upload to the isis data catalogue will include cross testing and buffer mechanism to acccommodate the situation where for some the catalogue is not available. It will involve close interactions with the catalogue team to ensure the data are inserterted in the right place etc.
+
+## Towards easier longer term reduction reproducibility
+Autoreduction can already reproduce reduction data within its environment and within a given ISIS cycle and even to some extend older cycle up to the point where the software on the underlying compute nodes have not changed. For edging towards reduction reproducabiity beyond this, either using Autoreduction or some other service / software package later in time, this needs tracking of both variables *and* the environment used to produce a reduced file. At present we can only track the variables. This work is to also track / store information about the environment used during reduction jobs. The first part of this sub-project would be to gather requirements for what environment information needs to be tracked and the ease/difficulty of gather such information, combined with a search for ideas for approaches to implement this.
+
 ## Web application dynamical graphical output
 The web application has been extending to allow static ploting. This project is to extend it allow dynamical plotting. A request from instrument scientists.
 This project would involve the following tasks:
@@ -10,16 +16,6 @@ This project would involve the following tasks:
 * Producing a dynamical plot from the output reduced file
 * Storing the plot in the database
 * Adding that plot to the web application
-
-## Web application testing
-The web application is a way in which users can monitor and interact with Autoreduction and it is used by support to monitor the system. A sub-project is to add automated testing to this part of the system also, with a combination of unit and system tests incorporating the test automation tool Selenium. For the more complex use cases, we would want to have a separate machine to run these test less frequently, once per day, as to not interfere with the travis testing pipeline. 
-This project would involve the following tasks:
-* Familiarising yourself with Selenium
-* Creating test cases to perform common workflows on the web application
-* Evaluating the best choice for automated testing
-* Setting up an automated testing instance on an external machine to run these tests
-*	Ensuring that the automated testing interfaces with git to get most up to date version of code base
-* Making the tests run on the machine externally accessible
 
 ## Autoreduction to be cloud compatible
 The autoreduction system currently run on non-cloud enabled hardware, which is not easy to extend and by its nature is not elastic. As such, we want to expand the system to be able to run on an expandable system and to deal with increased system load. We have started to make progress towards, including creating ansible scripts for automated creation of VMs on STFC/SCD cloud.
@@ -31,12 +27,5 @@ This project would involve the following tasks:
 * Setting up of suitable development environment for this, and complete a period of testing this environment and with Autoreduction team and well as with selected customers
 * Extensive period of next testing on production and before an ISIS cycle starts, with a wider range of customers
 
-## Database optimisations and handling new use cases
-* As project has grown identified need for 1) better optimisation 2) handle more meta-data and cater for more intelligent scripts e.g. can refer to previously reduced jobs.
 
-## Reduction reproducibility
-For full reduction reproducabiity, it's important that we trak the exact variables and environment used to produce a reduced file. At present we can only track the variables. It'll be important to also include the docker container used etc and a way to use it again. For the use of other projects, applications of autoreduction it is important to make this more generic. 
-* Define configuration that states all the input / output parameters of a processing job
-* Allow the QueueProcessors to operate with these configurations
-* Ensure that ISIS data can construct these configurations 
-* Ensure all the relevant meta data is captured to allow for reproducability of processing
+
