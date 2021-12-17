@@ -1,7 +1,7 @@
 # Autoreduction design document
 ## Overview
 ### Chart
-![infrastructure overview](https://github.com/autoreduction/autoreduce-documents/blob/master/security-groups.png)
+![infrastructure overview](https://github.com/autoreduction/autoreduce-documents/blob/master/design/infra-overview.png)
 ### Description
 The Autoreduce project provides ...
 
@@ -60,7 +60,7 @@ server itself is not recommended, and the alternative [WhiteNoise](http://whiten
 does not dynamically reload available files.
 
 Make sure that ports 80 (served by nginx for staticfiles) and 8000 (served by gunicorn for the django app) are
-OPEN in the ![security groups](https://github.com/autoreduction/autoreduce-documents/blob/master/security-groups.png)
+OPEN in the ![security groups](https://github.com/autoreduction/autoreduce-documents/blob/master/design/security-groups.png)
 
 #### **New deployment**:
 This service can be deployed entirely via the playbook
