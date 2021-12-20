@@ -7,12 +7,12 @@ The Autoreduction project provides and maintains an online service for automatic
 data reduction and processing during data gathering for experiments from all ISIS instruments
 
 ### URLs
-Autoreduction website - https://reduce.isis.cclrc.ac.uk/
-Kibana - https://reduce.isis.cclrc.ac.uk/kibana
-ActiveMQ Dashboard - https://reduce.isis.cclrc.ac.uk/amq
-Openstack URL - https://openstack.stfc.ac.uk/project/instances/
-Jira - https://autoreduce.atlassian.net/
-Github org - https://github.com/autoreduction
+- Autoreduction website - https://reduce.isis.cclrc.ac.uk/
+- Kibana - https://reduce.isis.cclrc.ac.uk/kibana
+- ActiveMQ Dashboard - https://reduce.isis.cclrc.ac.uk/amq
+- Openstack URL - https://openstack.stfc.ac.uk/project/instances/
+- Jira - https://autoreduce.atlassian.net/
+- Github org - https://github.com/autoreduction
 
 ## Parts
 
