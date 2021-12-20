@@ -123,10 +123,12 @@ Deployment uses the `activemq/deploy.yml` playbook. There's some additional conf
 - Admin dashboard passowrd is configured in `jetty-realm.properties`
 
 ### Run detection
-This monitors what runs are the latest one on the ISIS archive. It checks a lastruns.txt in each instrument folder,
-and if the number is newer it submits the difference in runs. The rest-api will then take care of finding the
-data location and submit the run to ActiveMQ,
+This monitors what runs are the latest one on the ISIS archive.
 
+#### **Responsibility**:
+It checks a lastruns.txt in each instrument folder, located at `/isis/NDX<instrument>/Instrument/logs/lastrun.txt`.
+
+If the number of the **latest run** is newer, it submits the runs that need to be processed to the REST API. The api will then take care of finding the data location and submitting the run to ActiveMQ.
 #### **Current & new deployments**:
 Deployment uses `run-detection/deploy.yml`.
 
