@@ -3,11 +3,16 @@
 ### Chart
 ![infrastructure overview](https://github.com/autoreduction/autoreduce-documents/blob/master/design/infra-overview.png)
 ### Description
-The Autoreduce project provides ...
+The Autoreduction project provides and maintains an online service for automatic
+data reduction and processing during data gathering for experiments from all ISIS instruments
 
-It uses a microservice structure for the deployment of each part
-
+### URLs
+Autoreduction website - https://reduce.isis.cclrc.ac.uk/
+Kibana - https://reduce.isis.cclrc.ac.uk/kibana
+ActiveMQ Dashboard - https://reduce.isis.cclrc.ac.uk/amq
 Openstack URL - https://openstack.stfc.ac.uk/project/instances/
+Jira - https://autoreduce.atlassian.net/
+Github org - https://github.com/autoreduction
 
 ## Parts
 
@@ -51,6 +56,10 @@ The webapp instance is hosted on `webapp-prod` `172.16.113.48`
 
 The webapp instance hosts both the `webapp` and the static files server.
 
+#### **Responsibility**:
+The webapp is the main interface that users interact with. It's responsible for showing results
+from reductions, and allowing users some control over variable values and starting re-runs.
+
 #### **Current deployment**:
 The `webapp` is hosted via the Docker container, which runs the django app by using gunicorn as WSGI.
 The static files is a simple nginx server. On start, the webapp will run `manage.py collectstatic` and
@@ -70,11 +79,20 @@ however the **Security groups** must be manually configured via the openstack in
 ### REST API
 The REST API instance is hosted on `rest-api`. This has no additional parts apart from the main package.
 
+#### **Responsibility**:
+The REST API is responsible for handling all job submissions, both from run-detection and re-runs from the webapp.
+
+It processes the requests and submits the message to ActiveMQ.
+
 #### **Current & new deployments**:
 Deployments use the `rest-api/deploy.yml` playbook. Security groups must be added for port 8000.
 
 ### Queue Processors
 The queue processors are the ActiveMQ consumers and are scalable. They are identified by `qp-prod` and a number as suffix.
+
+#### **Responsibility**:
+The queue processors consume ActiveMQ messages containing information about the reductions,
+and proceed to execute the reductions.
 
 #### **Current & new deployments**:
 Deployment uses the `queue-processors/deploy.yml` playbook. The playbook will fully
@@ -86,7 +104,6 @@ The production database uses MySQL. It is ran via a docker container with a volu
 #### **Current & new deployments**:
 Deployment uses the `database/deploy.yml` playbook. The playbook will fully configure the DB and get it ready for connections
 
-
 ### Database backup
 The database backup runs daily backup on the full production database, and restores it in a local SQLite3 database,
 to ensure that the backups are actually working.
@@ -95,7 +112,8 @@ to ensure that the backups are actually working.
 Deployment uses the `database/backup.yml` playbook and will configure the node to do the daily backup & restore.
 
 ### ActiveMQ
-This is the messaging queue for the service. All runs are submitted to it, and are picked up by the queue processor consumers for processing
+This is the messaging queue for the service. All runs are submitted to it,
+and are picked up by the queue processor consumers for processing
 
 #### **Current & new deployments**:
 Deployment uses the `activemq/deploy.yml` playbook. There's some additional configuration handled for this deployment:
