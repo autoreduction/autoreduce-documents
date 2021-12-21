@@ -81,6 +81,8 @@ however the **Security groups** must be manually configured via the openstack in
 ### REST API
 The REST API instance is hosted on `rest-api`. This has no additional parts apart from the main package.
 
+#### **Permissions**:
+By default new users in the webapp don't have permissions to submit requests for runs/reruns to the REST API
 #### **Responsibility**:
 The REST API is responsible for handling all job submissions, both from run-detection and re-runs from the webapp.
 
