@@ -10,3 +10,21 @@ then select the `Superuser status` and click `Save`.
 
 ## Where are the reduction scripts?
 They are always at `\\isis\inst$\ndx<instrument>\user\scripts\autoreduction` or `/isis/user/scripts/autoreduction`
+
+## Where are the run-detection last runs saved?
+SSH into the run-detection node (check https://openstack.stfc.ac.uk/project/instances/) then change user to the
+value of `autoreduction_user` from the ansible production vault.
+
+Then lastruns.csv can be found at `~/.autoreduce/lastruns.csv`
+
+## Packages, containers and deployment
+Most repos will build packages on a PR merge into master, when the builds are successful.
+
+Manual packages can be built & published via `make` or `make package` (consult the `Makefile`)
+if something doesn't work. You will need to login into pypi locally using the autoreduce pypi account (check Keeper)
+or add your personal account with the autoreduce pypi account and use that.
+
+To build & update containers for each one check the
+[Makefile in autoreduce-containers](https://github.com/autoreduction/autoreduce-containers/blob/main/Makefile)
+
+To deploy to production check the [Makefile in ansible](https://github.com/autoreduction/ansible/blob/main/Makefile)

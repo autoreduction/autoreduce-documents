@@ -31,9 +31,13 @@ are in their own repositories, combined with the container definition files.
 All packages are built in their respective repository with either `make` or `make package`. For uploading
 check the [pypi docs](https://packaging.python.org/en/latest/tutorials/packaging-projects/#uploading-the-distribution-archives).
 
+All repositories on pypi are owned by an [autoreduce account](https://keepersecurity.eu/vault/#detail/50gcQln_LxV8JmlrCedKoA).
+Either get a token from it or add your personal account as a contributor to each package you want access to.
+
 All PRs also attempt to upload a package to pip, and should be successful if the version in the `setup.py` is incremented.
 
-All production containers are built in the [autoreduce-containers](https://github.com/autoreduction/autoreduce-containers) repository.
+All production containers have build commands in the
+[autoreduce-containers](https://github.com/autoreduction/autoreduce-containers) repository.
 
 To upload to the Github Container repository (GHCR) follow instructions on the [docs](https://github.com/features/packages).
 
