@@ -1,0 +1,6 @@
+@startuml User Workflow
+User -> Django: User requests information on a specific run
+Django -> Database: Django requests information for that specific run
+Database --> Django: Database returns run data, including path on CEPH
+Django --> User: Returns web page including path to data on CEPH
+@enduml
