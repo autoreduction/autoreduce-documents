@@ -1,0 +1,16 @@
+@startuml Run Detection
+RunDetection -> Archive: Gets runs
+Archive --> RunDetection: Returns current runs
+alt
+group New run detected
+    RunDetection -> RESTAPI: Send a post request updating that a new run exists
+    RESTAPI -> Database: Update database to include new run
+    RESTAPI -> QueueProcessor: Sends a kafka message with run details
+    QueueProcessor -> ReductionContainer: Creates a new container for the run, and starts the run.
+    ReductionContainer -> CEPH: Deposit reduced data onto CEPH
+    ReductionContainer --> QueueProcessor: Exits out back to the QueueProcessor
+    QueueProcessor --> Database: Updates run with reduced data path+ 
+else no new run detected
+    RunDetection -> RunDetection: Waits and starts sequence again
+end
+@enduml
